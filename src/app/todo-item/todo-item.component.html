@@ -1,0 +1,18 @@
+<mat-card class="card" [ngClass]="{'card--done': todo.is_complete}">
+  <mat-card-title [ngClass]="{'card-title--done': todo.is_complete}">{{todo.text}}</mat-card-title>
+  <mat-card-subtitle>{{todo.created_at | date:'mediumDate'}}</mat-card-subtitle>
+
+
+  <mat-chip-list>
+    <mat-chip *ngFor="let tag of todo.Tags" color="primary" selected>{{tag}}</mat-chip>
+  </mat-chip-list>
+
+  <mat-card-actions align="end">
+    <button mat-button (click)="toggleDone.emit(todo.id)">
+      <mat-icon>{{todo.is_complete ? 'restore' : 'done'}}</mat-icon>
+    </button>
+    <button mat-button (click)="del.emit(todo.id)">
+      <mat-icon>delete_outline</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

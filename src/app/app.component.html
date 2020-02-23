@@ -1,0 +1,15 @@
+<mat-toolbar color="warn">
+  <span>Todo Title</span>
+</mat-toolbar>
+<div class="container">
+  <div class="todo__column">
+
+    <mat-card class="todo__add" (click)="openDialog()">
+      <mat-icon aria-hidden="false">add</mat-icon>
+    </mat-card>
+
+    <app-todo-item *ngFor="let todo of todos" [todo]="todo" (del)="deleteTodo($event)"
+      (toggleDone)="toggleTodo($event)"></app-todo-item>
+  </div>
+
+</div>

@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>New Todo</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Text</mat-label>
+    <textarea matInput #addtext></textarea>
+  </mat-form-field>
+  <br>
+  <mat-form-field MatFormFieldControl appearance="fill">
+    <mat-label>Tags</mat-label>
+    <input matInput #addTags>
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="close()">No Thanks</button>
+  <button mat-button (click)="save(addtext.value, addTags.value)">Ok</button>
+</div>
