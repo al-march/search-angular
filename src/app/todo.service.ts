@@ -10,7 +10,7 @@ export class TodoService {
   constructor() { }
 
   getTodos() {
-    return TODOS.sort((a, b) => a.id - b.id)
+    return TODOS.sort((a, b) => b.id - a.id)
   }
   unshiftTodo(todo:Todo) {
     TODOS.unshift(todo);

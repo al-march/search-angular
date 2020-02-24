@@ -16,12 +16,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
+import { FilderTodoComponent } from './filder-todo/filder-todo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoItemComponent,
-    AddTodoComponent
+    AddTodoComponent,
+    FilderTodoComponent
   ],
   imports: [
     BrowserModule,

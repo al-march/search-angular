@@ -32,7 +32,7 @@ export class AddTodoComponent implements OnInit {
   }
   save(text, tags) {
     const { length } = this.todos;
-    const Tags:string[] = [...tags.split(' ')]
+    const Tags:string[] = tags.length > 0 ? [...tags.split(' ')] : []
     const newTodo:Todo = {
       "id": length + 1,
       "text": text,

@@ -3,8 +3,8 @@
   <mat-card-subtitle>{{todo.created_at | date:'mediumDate'}}</mat-card-subtitle>
 
 
-  <mat-chip-list>
-    <mat-chip *ngFor="let tag of todo.Tags" color="primary" selected>{{tag}}</mat-chip>
+  <mat-chip-list *ngIf="todo.Tags.length">
+    <mat-chip *ngFor="let tag of todo.Tags"  color="primary" selected>{{tag}}</mat-chip>
   </mat-chip-list>
 
   <mat-card-actions align="end">
